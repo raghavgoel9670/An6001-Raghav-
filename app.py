@@ -26,5 +26,10 @@ def dbs_preiction():
     r= model.predict([[q]])
     return(render_template("dbs_prediction.html",r=r[0][0]))
 
+@app.route("/creditability",methods=["GET","POST"])
+def creditability():
+    return(render_template("creditability.html"))
+
+
 if __name__ == "__main__":
     app.run()
